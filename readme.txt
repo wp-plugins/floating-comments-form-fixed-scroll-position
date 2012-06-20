@@ -20,7 +20,7 @@ compared to the traditional comments form. Given that it follows you as you scro
 the page, you can post a comment being at the bottom of the page but also at the 
 top.
 
-<a href='http://www.wpthemeshock.com/'>By WpThemeShock</a>
+<a href='http://www.wpthemeshock.com/'>By WpThemeShock</a> and <a href='http://www.wpthemegenerator.com/'> WpThemeGenerator</a>, <a href='http://www.designshock.com/psd-text-styles/'>set it in action.</a>
 
 == Installation ==
 
