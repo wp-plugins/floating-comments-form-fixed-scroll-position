@@ -1,5 +1,5 @@
 === Floating Comments Form Fixed Scroll Position ===
-Contributors: WpDesignShock, PabloVallejo
+Contributors: WpThemeShock	 
 Donate link: 
 Tags: comments, comment, fixed, scroll, float, widget
 Requires at least: 3.3
