@@ -12,7 +12,13 @@ Floating Comments allows users to post comments to your blog through a fancy for
 
 == Description ==
 
-This lightweight plugin creates a form that is placed by default at the left of the content, however you can change its position to anyplace within the screen. The basic function of it is serve as an alternative form to post comments that very handy compared = to the traditional comment form. This form follows you as you scroll down by the page, you can post a comment being at the bottom of the page as well as when on the top.
+This lightweight plugin creates a form that is placed by default at the left of the 
+content, and is fixed to the top of the page once it gets to it.
+
+Floatin Comments serves as an alternative form to post comments that is very handy 
+compared to the traditional comments form. Given that it follows you as you scroll down by 
+the page, you can post a comment being at the bottom of the page but also at the 
+top.
 
 == Installation ==
 
