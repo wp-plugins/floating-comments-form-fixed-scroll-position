@@ -48,6 +48,5 @@ No, that is not possible, we'll try to implement that option in future versions.
 
 == Features ==
 
-*4 Different Colors
-*Fixed position when the form gets to the top.
+*4 Different Colors, *Fixed position when the form gets to the top,
 *Ajax-Powered
