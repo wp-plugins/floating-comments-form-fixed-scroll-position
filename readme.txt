@@ -48,5 +48,6 @@ First Version Published
 
 == Features ==
 
-*4 Different Colors, *Fixed position when the form gets to the top,
-*Ajax-Powered
+1. 4 Different Colors
+2. Fixed position when the form gets to the top
+3. Ajax-Powered
