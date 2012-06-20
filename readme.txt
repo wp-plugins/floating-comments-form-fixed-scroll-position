@@ -40,7 +40,7 @@ No, that is not possible, we'll try to implement that option in future versions.
 
 == Changelog ==
 
-
+First Version Published
 
 == Upgrade notice ==
 
