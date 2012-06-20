@@ -51,3 +51,4 @@ First Version Published
 1. 4 Different Colors
 2. Fixed position when the form gets to the top
 3. Ajax-Powered
+4. Get 100 free sample WordPress Themes
