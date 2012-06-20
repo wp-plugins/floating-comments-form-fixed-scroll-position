@@ -4,7 +4,7 @@ Donate link:
 Tags: comments, comment, fixed, scroll, float, widget
 Requires at least: 3.3
 Tested up to: 3.3
-Stable tag: 
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
