@@ -65,3 +65,4 @@ First Version Published
 2. Fixed position when the form gets to the top
 3. Ajax-Powered
 4. Get 100 free sample WordPress Themes
+5. 5 Different languages, English, Spanish, Portuguese, French and Dutch.
