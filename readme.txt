@@ -20,6 +20,17 @@ compared to the traditional comments form. Given that it follows you as you scro
 the page, you can post a comment being at the bottom of the page but also at the 
 top.
 
+This plugin is available in 5 different languages, English, Spanish, Portuguese, 
+French and Dutch, it will recognize your WordPress installation language and if 
+yours is in one of the previews languages you'll have it automatically 
+translated.
+
+
+
+
+
+
+
 <a href='http://www.wpthemeshock.com/'>By WpThemeShock</a> and <a href='http://www.wpthemegenerator.com/'> WpThemeGenerator</a>, <a href='http://www.designshock.com/psd-text-styles/'>see it in action.</a>
 
 == Installation ==
