@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FloatingComments\n"
 "POT-Creation-Date: 2012-06-13 09:04-0500\n"
-"PO-Revision-Date: 2012-06-22 18:00-0500\n"
+"PO-Revision-Date: 2012-06-22 18:29-0500\n"
 "Last-Translator: Pablo <pabloninety@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,12 +14,12 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 
 #: WPTSfloatingComments:1
-msgid "Choose Horizontal offset"
-msgstr "Escolha deslocamento horizontal"
+msgid "Initial X Position"
+msgstr "Posição X inicial"
 
 #: WPTSfloatingComments:2
-msgid "Choose vertical offset"
-msgstr "Escolha deslocamento vertical"
+msgid "Initial Y Position"
+msgstr "Posição Y inicial"
 
 #: WPTSfloatingComments:3
 msgid "Use above options to set Floating Comments position"
@@ -74,6 +74,6 @@ msgid "Thanks for leaving us your comments and suggestions"
 msgstr "Obrigado por nos deixar seus comentários e sugestões"
 
 #: WPTSfloatingComments:16
-msgid "Let it fixed at"
-msgstr "mudá-lo para fixo nesta posição"
+msgid "Fixed at from the top"
+msgstr "Fixado em a partir do topo"
 
