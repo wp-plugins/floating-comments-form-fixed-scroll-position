@@ -29,6 +29,14 @@
 							<input name='Y_position' type='text'  id="" value='<?php echo get_option( 'FCPositionY' ); ?>'  />
 						</td>
 					</tr>
+					<tr valign="top">
+						<th>
+							<label for="name"><?php _e('Let it fixed at', 'WPTSfloatingComments'); ?></label>
+						</th>
+						<td>
+							<input name='fc-fixed_position' type='text'  id="" value='<?php echo get_option( 'FCFixedPosition' ) - 35; ?>'  />
+						</td>
+					</tr>
 				</tbody>
 			</table>
 			

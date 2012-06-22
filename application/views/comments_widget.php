@@ -175,12 +175,15 @@ function show_result_message( $type )
 	 	var commentsBox  = jQuery( '#toBeAppended');
 	 	var boxPositionY = commentsBox.position().top;
 	 	var scrollTopSize = jQuery(window).scrollTop();
+	 	$fixedPosition = '<?php echo $fixedPosition; ?>';
+	 	$fixedPosition = parseInt($fixedPosition);
+	 	//alert($fixedPosition);
 	 	//alert( postDivOffsetTop );
 	 	//When box position.top = 10px change css position to fixed
 	 	
-	 	if( scrollTopSize > postDivOffsetTop + $positionY )
+	 	if( scrollTopSize > postDivOffsetTop + $positionY - $fixedPosition )
 	 	{	
-	 		commentsBox.css({'position':'fixed', 'top': '35px'});
+	 		commentsBox.css({'position':'fixed', 'top': $fixedPosition });
 	 	}
 	 	else if( scrollTopSize < postDivOffsetTop + $positionY )
 	 	{
