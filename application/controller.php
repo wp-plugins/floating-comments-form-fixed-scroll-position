@@ -77,6 +77,7 @@ class FC_Controller
 			// Send box positions X plus Y
 			$data['positionXPhp']                     = get_option( 'FCPositionX' );
 			$data['positionYPhp']                     = get_option( 'FCPositionY' );
+			$data['fixedPosition']					  = get_option( 'FCFixedPosition' );
 
 			// Images
 			$data[ 'FCSmallInterfaceImage']  				  = array(

@@ -6,7 +6,7 @@ class FC_Model
 	{
 		if ( isset($_POST['submit']) ) 
 		{	
-			if( isset($_POST['X_position'], $_POST['Y_position']) 
+			if( isset($_POST['X_position'], $_POST['Y_position'], $_POST['fc-fixed_position']) 
 				&&  $_POST['X_position'] != null 
 				&&  $_POST['Y_position'] != null
 				/*&& $_POST['X_position'] < 1000 
@@ -17,8 +17,9 @@ class FC_Model
 				&& is_numeric( $_POST['Y_position'] )
 				)
 			{	
-				$positionX = $_POST['X_position'] + 120;
-				$positionY = $_POST['Y_position'];
+				$positionX     = $_POST['X_position'] + 120;
+				$positionY     = $_POST['Y_position'];
+				$fixedPosition = $_POST['fc-fixed_position'] + 35;
 
 				if( isset( $_POST['FCDesign1'])  )
 				{
@@ -26,7 +27,7 @@ class FC_Model
 					$design1 = 1;
 
 					//Write Values in the DB
-					$this->update_FC_options( $positionX, $positionY, $design1 );
+					$this->update_FC_options( $positionX, $positionY, $design1, $fixedPosition );
 
 					//Write the selected checkbox value
 					$this->FC_checked_box( 1 );
@@ -42,7 +43,7 @@ class FC_Model
 					$design2 = 2;
 
 					//Write Values in the DB
-					$this->update_FC_options( $positionX, $positionY, $design2 );
+					$this->update_FC_options( $positionX, $positionY, $design2, $fixedPosition );
 
 					//Write the selected checkbox value
 					$this->FC_checked_box( 2 );
@@ -57,7 +58,7 @@ class FC_Model
 					$design3 = 3;
 
 					//Write Values in the DB
-					$this->update_FC_options( $positionX, $positionY, $design3 );
+					$this->update_FC_options( $positionX, $positionY, $design3, $fixedPosition );
 
 					//Write the selected checkbox value
 					$this->FC_checked_box( 3 );
@@ -72,7 +73,7 @@ class FC_Model
 					$design4 = 4;
 
 					//Write Values in the DB
-					$this->update_FC_options( $positionX, $positionY, $design4 );
+					$this->update_FC_options( $positionX, $positionY, $design4, $fixedPosition );
 
 					//Write the selected checkbox value
 					$this->FC_checked_box( 4 );
@@ -117,11 +118,12 @@ class FC_Model
 		<?php  }
 	}
 
-	function update_FC_options( $positionX, $positionY, $design )
+	function update_FC_options( $positionX, $positionY, $design, $fixedPosition )
 	{
 		//Update Positions
 		update_option( 'FCPositionX', $positionX );
 		update_option( 'FCPositionY', $positionY );
+		update_option( 'FCFixedPosition', $fixedPosition );
 
 		//Update Design
 		update_option( 'FCDesign', $design );
