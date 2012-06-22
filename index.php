@@ -3,7 +3,7 @@
 Plugin Name: Floating Comments Fixed Scroll Position
 Plugin URI: http://www.wordpressthemeshock.com/
 Description: Creates a fancy comment box at the side of the content
-Author: ThemeShock
+Author: WpThemeShock
 Version: 1.0
 Author URI: http://www.wordpressthemeshock.com/
 */
