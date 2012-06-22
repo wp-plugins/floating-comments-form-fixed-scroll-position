@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTSfloatingComments\n"
 "POT-Creation-Date: 2012-06-13 09:25-0500\n"
-"PO-Revision-Date: 2012-06-13 09:30-0500\n"
+"PO-Revision-Date: 2012-06-22 18:02-0500\n"
 "Last-Translator: Pablo <pabloninety@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -73,4 +73,8 @@ msgstr "Gravatar oder EMail"
 #: WPTSfloatingComments:15
 msgid "Thanks for leaving us your comments and suggestions"
 msgstr "Vielen Dank für verlässt uns Ihre Kommentare und Anregungen"
+
+#: WPTSfloatingComments:16
+msgid "Let it fixed at"
+msgstr "veranderen vaste op deze plaats"
 
