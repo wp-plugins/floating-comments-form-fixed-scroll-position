@@ -48,13 +48,15 @@ Author URI: http://www.wordpressthemeshock.com/
 
     function after_FC_plugin_activated()
     {           
-        $defaultPositionX = 120;
-        $defaultPositionY = 1;
-        $defaultStyle     = 1;
+        $defaultPositionX     = 120;
+        $defaultPositionY     = 1;
+        $defaultFixedPosition = 35;
+        $defaultStyle         = 1;
 
         //Set default Positions
         update_option( 'FCPositionX', $defaultPositionX );
         update_option( 'FCPositionY', $defaultPositionY );
+        update_option( 'FCFixedPosition', $defaultFixedPosition );
 
         //Set default Design
         update_option( 'FCDesign', $defaultStyle );
