@@ -53,7 +53,8 @@ No, that is not possible, we'll try to implement that option in future versions.
 
 == Changelog ==
 
-First Version Published
+= 1.0 =
+* Aditional input for selecting where the form gets fixed.
 
 == Upgrade notice ==
 
