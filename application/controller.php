@@ -29,7 +29,7 @@ class FC_Controller
 			'manage_options',
 			'floating_comments_slug',
 			array( &$this, 'render_interface' ),
-			plugin_dir_url(__FILE__). 'views/img/fc_icon.png'
+			plugin_dir_url(__FILE__). 'views/img/themeshock2.png'
 		);
 
 	}
