@@ -1,5 +1,8 @@
 <?php
-
+/**
+* @package Floating Comments
+*
+**/
 class FC_Controller
 {
 	public $load;
