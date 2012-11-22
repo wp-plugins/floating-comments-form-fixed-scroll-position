@@ -71,8 +71,6 @@ Author URI: http://www.wordpressthemeshock.com/
         update_option( 'FC_form_checkbox4', 0 );
     }
 
-    
-
-
-    
+   
+ 
 ?>
