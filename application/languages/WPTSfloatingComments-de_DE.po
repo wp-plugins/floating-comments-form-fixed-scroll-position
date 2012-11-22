@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPTSfloatingComments\n"
+"POT-Creation-Date: 2012-06-13 09:25-0500\n"
+"PO-Revision-Date: 2012-06-22 18:30-0500\n"
+"Last-Translator: Pablo <pabloninety@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: WPTSfloatingComments:1
+msgid "Initial X Position"
+msgstr "De eerste X-positie"
+
+#: WPTSfloatingComments:2
+msgid "Initial Y Position"
+msgstr "De eerste Y-positie"
+
+#: WPTSfloatingComments:3
+msgid "Use above options to set Floating Comments position"
+msgstr "UVerwenden Sie zum oben genannten Optionen Floating Comments Position gesetzt"
+
+#: WPTSfloatingComments:4
+msgid "Would you like give us some credit? come on be nice :) "
+msgstr "Wilt u ons wat krediet? kom op mooi zijn :)"
+
+#: WPTSfloatingComments:4.1
+msgid "Save Changes"
+msgstr "Sla de wijzigingen op"
+
+#: WPTSfloatingComments:5
+msgid "Powered By: "
+msgstr "Ontwikkeld: "
+
+#: WPTSfloatingComments:6
+msgid " and "
+msgstr " en "
+
+#: WPTSfloatingComments:7
+msgid "One theme, a thousand posibilities: Create amazing and unlimited themes by playing with 1000+ pre-designed elements (or uploading your own designs) and then download in fully working WP or HTML/CSS."
+msgstr "Ein Thema, tausend posibilities: Erstellen Sie verblüffende und unbegrenzter Themen durch das Spiel mit 1000 + fertig gestaltete Elemente (oder Hochladen Ihrer eigenen Entwürfen) und laden Sie dann in voll funktionsfähige WP oder HTML/CSS."
+
+#: WPTSfloatingComments:8
+msgid "100 Free Sample Themes"
+msgstr "100 Gratis sample thema's"
+
+#: WPTSfloatingComments:8.1
+msgid "Check The 1 Minute Video"
+msgstr "Bekijk video"
+
+#: WPTSfloatingComments:9
+#: WPTSfloatingComments:10
+msgid "Comment Here"
+msgstr "Kommentar Hier"
+
+#: WPTSfloatingComments:12
+msgid "Share some love with a comment"
+msgstr "Danke für euer Feedback"
+
+#: WPTSfloatingComments:13
+msgid "Name"
+msgstr "Name"
+
+#: WPTSfloatingComments:14
+msgid "Gravatar or email"
+msgstr "Gravatar oder EMail"
+
+#: WPTSfloatingComments:15
+msgid "Thanks for leaving us your comments and suggestions"
+msgstr "Vielen Dank für verlässt uns Ihre Kommentare und Anregungen"
+
+#: WPTSfloatingComments:16
+msgid "Fixed at from the top"
+msgstr "Vastgesteld op vanaf de top"
+

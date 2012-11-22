@@ -1,0 +1,74 @@
+.form-table input[type=checkbox]
+{
+	color: red;
+	margin: 5px;
+}
+
+.form-table input[type=text]
+{
+	width: 80px;
+}
+
+.fc-theme-scheme
+{
+	width: 330px;
+	margin-bottom: 50px;
+}
+
+.fc_theme_scheme_option
+{
+	width: 80px;
+	float: left;
+}
+
+
+.fc_modal_box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  padding: 10px;
+  margin: -250px 0 0 -280px;
+  
+  overflow: auto;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+
+          display: none;
+
+}
+
+.fc_modal_backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+  opacity: 0.8;
+  display: none;
+}
+
+#videoIframe
+{
+	display: none;
+}
+
+#WPTG_description
+{
+	width: 420px;
+}
