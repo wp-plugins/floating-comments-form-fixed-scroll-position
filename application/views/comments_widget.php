@@ -1,10 +1,10 @@
-
 <link rel="stylesheet" type="text/css" href="<?php echo plugin_dir_url(__FILE__); ?>css/buttons.css">
 <!-- Include the css of the selected theme instead of changing the default using jQuery-->
 <link rel="stylesheet" type="text/css" href="<?php echo plugin_dir_url(__FILE__) . 'css/front_view_base.css'; ?> ">
 <link rel="stylesheet" type="text/css" href="<?php echo plugin_dir_url(__FILE__) . 'css/' . $fc_theme_style; ?> ">
 <?php echo $maybe_display_wptg_credit; ?>
 
+<noscript><strong>Your browser doesn't have Javascript activated. Please activate in your browser settings first.</strong><br /></noscript>
 
 
 <div id="toBeAppended">
@@ -15,7 +15,6 @@
 	
 	<div class='commemt-form'>
 		<form class='custom-comment' action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php" method='post' id='commentform' >
-			
 			<input class='custom-comment-form-username' type="text" name='author' value="<?php _e('Name', 'WPTSfloatingComments');  ?>"  >
 			<input class='custom-comment-form-email' type='text' name='author_email' value='<?php _e('Gravatar or email', 'WPTSfloatingComments'); ?>' >
 			<textarea class='custom-comment-form-textarea' name='comment' id='comment'><?php _e('Thanks for leaving us your comments and suggestions', 'WPTSfloatingComments');  ?></textarea>
@@ -47,6 +46,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 
+var newcaptcha = '<input type="text" id="invisibleCaptcha" value="<?php echo $_SESSION['invisibleCaptcha']; ?>" style="display:none;"/>';
+jQuery("#commentform").prepend(newcaptcha);
 
 function hideFieldsValuesWhenClicked()
 {
@@ -104,31 +105,55 @@ function validate_form()
 
 function show_result_message( $type )
 {
-	if( $type == 1 )
+	switch( $type )
 	{	
-		var smallForm = jQuery( '#contact_form_small' );
-    	var clickArea = jQuery( '.click_area' );
+		case 3:
+		jQuery( '.feedback_message' ).html('Invalid Email');
+				setTimeout( function(){
+					$smallFormTitle  = jQuery( '.fc_image_title' );
+					$feedbackMessage = jQuery( '.feedback_message' );
+					
+				$feedbackMessage.fadeOut();
+				
+
+
+		}, 10000);
+		break;
 		
-		jQuery( '.feedback_message' ).html( 'Comment Sent.' );
-			//Hide the feedback message
-			setTimeout( function(){ 
-				jQuery( '.feedback_message' ).fadeOut();
-			}, 1000);
+		case 2:
+		jQuery( '.feedback_message' ).html('Invalid Captcha');
+				setTimeout( function(){
+					$smallFormTitle  = jQuery( '.fc_image_title' );
+					$feedbackMessage = jQuery( '.feedback_message' );
+					
+				$feedbackMessage.fadeOut();
+				
 
-			//Hide the container
-			setTimeout( function(){ 
-				$smallFormTitle = jQuery( '.fc_image_title' );
-				jQuery( '.commemt-form' ).hide();
-				smallForm.show();
-				clickArea.show();
-				$smallFormTitle.show();
-				maybeShowCreditLink();
-			}, 2000);
 
-	}
-
-	else if ( $type == 0 )
-	{
+		}, 10000);
+		break;
+		case 1:
+			var smallForm = jQuery( '#contact_form_small' );
+			var clickArea = jQuery( '.click_area' );
+			
+			jQuery( '.feedback_message' ).html( 'Comment Sent.' );
+				//Hide the feedback message
+				setTimeout( function(){ 
+					jQuery( '.feedback_message' ).fadeOut();
+				}, 1000);
+	
+				//Hide the container
+				setTimeout( function(){ 
+					$smallFormTitle = jQuery( '.fc_image_title' );
+					jQuery( '.commemt-form' ).hide();
+					smallForm.show();
+					clickArea.show();
+					$smallFormTitle.show();
+					maybeShowCreditLink();
+				}, 2000);
+		break;
+		
+		case 0:
 		jQuery( '.feedback_message' ).html('Fill all Fields');
 				setTimeout( function(){
 					$smallFormTitle  = jQuery( '.fc_image_title' );
@@ -139,6 +164,7 @@ function show_result_message( $type )
 
 
 		}, 10000);
+		break;
 	}
 
 } 
@@ -249,15 +275,27 @@ jQuery(document).mouseup(function (e)
 
  	if( validate_form() )
  	{	
- 		jQuery.ajax({
-	 		type: 'POST',
-	 		data: { userName : $userName, userEmail : $userEmail, commentContent: $commentContent, postId: $postId },
-	 		success: function(data){
-	 			//alert(data);
-	 		}
- 		});
+		if( ValidateCaptcha() ){
+			
+			if( validate_email() ){
+				jQuery.ajax({
+					type: 'POST',
+					data: { userName : $userName, userEmail : $userEmail, commentContent: $commentContent, postId: $postId },
+					success: function(data){
+						//alert(data);
+					}
+ 				});
 
- 		show_result_message( 1 );
+ 				show_result_message( 1 );
+			}
+			else{
+				show_result_message( 3 );
+			}
+		}
+		else{
+			show_result_message( 2 );
+		}
+ 		
  	}
 
  	else if ( ! validate_form() )
@@ -278,6 +316,33 @@ jQuery(document).mouseup(function (e)
 	        	$wptgCreditDiv.show();
 	        }
         }
+
+	function ValidateCaptcha(){
+		var $captchafield	 = jQuery( '#invisibleCaptcha' ).val(); 
+			$captchasession  = '<?php echo $_SESSION['invisibleCaptcha'] ?>';
+		
+		//compare captchas
+		if( $captchafield == $captchasession ){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	
+	 function validate_email()
+    {
+			var value = jQuery( '.custom-comment-form-email' ).val();
+			
+			// create our rule with regular expressions
+			var filter = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+			// we use the test function to certificate value apply the rule
+			if(filter.test(value))
+				return true;
+			else
+				return false;
+	}
 
  </script>
 

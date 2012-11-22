@@ -1,12 +1,14 @@
 <?php
+$_SESSION['invisibleCaptcha'] = md5( rand( 0, 100000 ) );
+
 
 if(      isset( $_POST['userName'], $_POST['commentContent'], $_POST['postId'], $_POST['userEmail'] ) 
 	&& ! empty($_POST['userName']) && ! empty($_POST['commentContent'] ) && ! empty($_POST['userEmail']) )
 {
 	$time 	  		   = current_time('mysql');
-	$userName 		   = $_POST['userName'];
-	$userEmail		   = $_POST['userEmail'];
-	$commentContent    = $_POST['commentContent'];
+	$userName 		   = htmlentities($_POST['userName']);
+	$userEmail		   = htmlentities($_POST['userEmail']);
+	$commentContent    = htmlentities($_POST['commentContent']);
 	$postId            = $_POST['postId'];
 	$commentModeration = get_option( 'comment_moderation' );
 	
